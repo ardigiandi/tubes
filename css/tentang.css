@@ -1,0 +1,451 @@
+/* Body*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4B5945;
+    color: #fff;
+}
+
+.navbar h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    order: 2; /* Menempatkan logo di sebelah kanan */
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+    max-width: 90px;
+    margin-left: 10px; /* Posisikan logo lebih rapat ke teks */
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    background: #B2C9AD;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        display: none;
+        background: #1e88e5;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-search {
+        display: none; /* Hide search on smaller screens, you can adjust if needed */
+    }
+}
+/*END NAVBAR SECTION*/
+
+/* Tentang1 */
+.tentang-section {
+    position: relative; /* Dibutuhkan untuk memposisikan elemen anak dengan absolute */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    max-width: 1200px; /* Batasi lebar maksimal */
+    gap: 30px; /* Jarak antar elemen */
+    align-items: center; /* Elemen vertikal rata tengah */
+    justify-content: center; /* Elemen horizontal rata tengah */
+    position: relative; /* Di atas overlay */
+    margin: 40px;
+}
+
+.container .image {
+    max-width: 542px;
+    padding: 20px;
+}
+
+.container .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.container .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 1; /* Teks mengambil 1 bagian dari total ruang */
+    color: white; /* Warna teks kontras dengan overlay */
+}
+
+.text-container h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #4B5945;
+    text-align: center;
+}
+
+.text-container p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+/* End Tentang1 */
+
+/*ABOUT SECTION*/
+.tentang-section {
+    padding: 50px 20px;
+    background: #f4f4f4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tentang-content {
+    max-width: 600px;
+    text-align: center;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.tentang-content h2 {
+    font-size: 2.5rem;
+    color: #4B5945;
+    margin-bottom: 20px;
+}
+
+.tentang-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.tentang-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.gallery-item-tentang {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 300px;
+}
+
+.gallery-item-tentang:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-item-tentang img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #1e88e5;
+}
+
+.gallery-item-tentang p {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .tentang-section {
+        flex-direction: column;
+    }
+
+    .tentang-content h2 {
+        font-size: 2rem;
+    }
+
+    .tentang-content p {
+        font-size: 1rem;
+    }
+}
+/*END ABOUT SECTION*/
+
+.habitat-container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.habitat-container h2 {
+    font-size: 2.5rem;
+    color: #4B5945;
+    margin-bottom: 20px;
+}
+
+.habitat-container p {
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.batik-table {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.batik-table th, .batik-table td {
+    padding: 16px 8rem;
+    text-align: left;
+    line-height: 1.6;
+    margin: 20px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.batik-table th {
+    background-color: #91AC8F;
+    color: #fff;
+}
+
+.batik-table img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.batik-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.batik-table tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease;
+}
+
+/* Gaya Kategori Daerah */
+.daerah th {
+    text-align: center;
+    background-color: #C7B7A3;
+}
+
+
+
+/* FOOTER SECTION */
+footer {
+    background-color: #4B5945;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.footer-column h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 0.9em;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*END FOOTER SECTION*/

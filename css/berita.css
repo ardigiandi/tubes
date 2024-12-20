@@ -1,0 +1,304 @@
+/* Body*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4B5945;
+    color: #fff;
+}
+
+.navbar h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+    order: 2; /* Menempatkan logo di sebelah kanan */
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+    max-width: 90px;
+    margin-left: 10px; /* Posisikan logo lebih rapat ke teks */
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.navbar-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    background: #B2C9AD;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        display: none;
+        background: #1e88e5;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-search {
+        display: none; /* Hide search on smaller screens, you can adjust if needed */
+    }
+}
+/*END NAVBAR SECTION*/
+
+/* BERITA SECTION */
+.berita-section {
+    padding: 50px;
+    background: linear-gradient(135deg, #eef2f3, #d6e5e3);
+    color: #333;
+}
+
+.berita-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+        color: #4B5945;
+        text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.berita-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.berita-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.berita-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.berita-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.berita-item:hover .berita-image {
+    filter: brightness(1);
+}
+
+.berita-details {
+    padding: 20px;
+    position: relative;
+}
+
+.berita-date {
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    background-color: #4B5945;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.berita-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4B5945;
+    font-weight: bold;
+}
+
+.berita-details p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .berita-container {
+        grid-template-columns: 1fr;
+    }
+
+    .berita-details {
+        padding: 15px;
+    }
+}
+
+
+/* FOOTER SECTION */
+footer {
+    background-color: #4B5945;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.footer-column h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 0.9em;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*END FOOTER SECTION*/

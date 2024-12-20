@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JungleTales</title>
+    <link rel="stylesheet" href="./css/galeri.css">
+
+    <!-- font awesome style -->
+    <link href="./css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Tambahkan di bagian <head> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--navbar-->
+    <nav id="index" class="navbar">
+        <div class="navbar-brand">
+            <h1>
+                <img src="./img/logo.png" alt="logo" class="navbar-logo">JungleTales
+            </h1>
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="jenisfauna.html">Jenis fauna</a></li>
+            <li><a href="fakta.html">Fakta Menarik</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
+        <div class="navbar-search">
+            <input type="text" placeholder="Search..." class="search-input">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="subjudul">Galeri Fauna</h2>
+        <section class="gallery">
+            <div class="gallery-item"><img src="./img/mamalia1.jpeg" alt="Bunga 1"></div>
+            <div class="gallery-item"><img src="./img/mamalia2.jpeg" alt="Bunga 2"></div>
+            <div class="gallery-item"><img src="./img/mamalia3.jpeg" alt="Bunga 3"></div>
+            <div class="gallery-item"><img src="./img/burung1.jpeg" alt="Bunga 4"></div>
+            <div class="gallery-item"><img src="./img/burung2.jpeg" alt="Bunga 5"></div>
+            <div class="gallery-item"><img src="./img/burung3.jpeg" alt="Bunga 6"></div>
+            <div class="gallery-item"><img src="./img/reptil1.jpeg" alt="Bunga 7"></div>
+            <div class="gallery-item"><img src="./img/reptil2.jpeg" alt="Bunga 8"></div>
+            <div class="gallery-item"><img src="./img/reptil3.jpeg" alt="Bunga 9"></div>
+            <div class="gallery-item"><img src="./img/serangga1.jpeg" alt="Bunga 9"></div>
+        </section>    
+        <script>
+            const galleryItems = document.querySelectorAll('.gallery-item');
+        
+            const handleScroll = () => {
+                galleryItems.forEach(item => {
+                    const rect = item.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        item.classList.add('visible');
+                    }
+                });
+            };
+        
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check in case items are already in view
+        </script>
+      </div>
+       <!-- Bagian Tutorial Video -->
+       <section id="tutorial-video">
+            <h2>Galeri Video</h2>
+
+            <div id="video1">
+                <h3>1. Amazon Animals</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s7DbVTkaXn0?si=32HIiEcEZFsvRGL5" 
+                        title="videoedu" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div id="video2">
+                <h3>2. Asia Animals</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KfjIaEP0EtY?si=qf9bv1qxw2OGgxh2" 
+                        title="videoeduu" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+</main>
+<!-- End: Bagian video -->
+
+    <footer>
+        <div class="footer-container">
+            <!-- Footer Content -->
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>JungleTales</h3>
+                    <p>membawa Anda lebih dekat dengan dunia fauna. Jelajahi kisah-kisah menarik tentang kehidupan satwa liar, ekosistem mereka, dan tantangan yang dihadapi dalam menjaga keberagaman hayati di seluruh dunia.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Navigasi</h3>
+                    <a href="index.html">Beranda</a><br>
+                    <a href="tentang.html">Tentang</a><br>
+                    <a href="jenisfauna.html">Jenis Fauna</a><br>
+                    <a href="fakta.html">Fakta Menarik</a><br>
+                    <a href="galeri.html">Galeri</a><br>
+                    <a href="kontak.html">Kontak Kami</a><br>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:info@jungletales.com">info@jungletales.com</a></p>
+                    <p>Phone: +123 456 789</p>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <ul class="social-icons">
+                <li><a href="#" class="fab fa-facebook-f"></a></li>
+                <li><a href="#" class="fab fa-twitter"></a></li>
+                <li><a href="#" class="fab fa-instagram"></a></li>
+                <li><a href="#" class="fab fa-youtube"></a></li>
+            </ul>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 JungleTales | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
